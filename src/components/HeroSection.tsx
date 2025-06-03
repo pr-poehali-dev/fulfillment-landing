@@ -28,6 +28,10 @@ const HeroSection = () => {
           <Button
             size="lg"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg"
+            onClick={() => {
+              const contactSection = document.querySelector("#contact-form");
+              contactSection?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Получить расчёт
           </Button>

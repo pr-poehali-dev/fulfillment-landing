@@ -67,7 +67,10 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8">
+          <div
+            className="bg-white/5 backdrop-blur-sm rounded-xl p-8"
+            id="contact-form"
+          >
             <h3 className="text-2xl font-bold mb-6">Получить расчёт</h3>
 
             <form className="space-y-6">

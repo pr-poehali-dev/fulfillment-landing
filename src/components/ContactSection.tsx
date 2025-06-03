@@ -49,7 +49,7 @@ const ContactSection = () => {
                   <div>
                     <div className="font-semibold">Адрес</div>
                     <div className="opacity-80">
-                      Москва, рядом с 3-м кольцом
+                      Москва, ул. Сормовский проезд 7А к2
                     </div>
                   </div>
                 </div>

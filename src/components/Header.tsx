@@ -8,9 +8,14 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-gray-900 font-montserrat">
-              FulFillment Pro
-            </h1>
+            <div>
+              <h1 className="text-xl font-bold text-gray-900 font-montserrat">
+                FulFillment Pro
+              </h1>
+              <p className="text-xs text-gray-600">
+                Москва, ул. Сормовский проезд 7А к2
+              </p>
+            </div>
           </div>
 
           {/* Contact Info & Messengers */}

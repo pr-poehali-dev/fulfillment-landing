@@ -2,8 +2,46 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    quantity: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const message = `Новая заявка с сайта FF-Best:
+
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Email: ${formData.email}
+Количество товаров в месяц: ${formData.quantity}
+Сообщение: ${formData.message}`;
+
+    // Отправка в Telegram
+    const telegramUrl = `https://t.me/best_shoping?text=${encodeURIComponent(message)}`;
+    window.open(telegramUrl, "_blank");
+
+    // Отправка на email
+    const emailUrl = `mailto:ff-best@bk.ru?subject=Новая заявка с сайта&body=${encodeURIComponent(message)}`;
+    window.open(emailUrl, "_blank");
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <section className="py-20 px-4 bg-gray-900 text-white">
       <div className="container mx-auto max-w-6xl">
@@ -73,13 +111,19 @@ const ContactSection = () => {
           >
             <h3 className="text-2xl font-bold mb-6">Получить расчёт</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Ваше имя"
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
                 />
                 <Input
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   type="tel"
                   placeholder="Телефон"
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
@@ -87,23 +131,35 @@ const ContactSection = () => {
               </div>
 
               <Input
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 type="email"
                 placeholder="Email"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
 
               <Input
+                name="quantity"
+                value={formData.quantity}
+                onChange={handleChange}
                 placeholder="Количество товаров в месяц"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
 
               <Textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Расскажите о ваших товарах и требованиях"
                 rows={4}
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
 
-              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg">
+              <Button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 text-lg"
+              >
                 Получить расчёт
               </Button>
             </form>
@@ -115,7 +171,7 @@ const ContactSection = () => {
               </p>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://wa.me/+79688901002"
+                  href="https://t.me/best_shoping"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2 rounded-lg transition-colors"
@@ -125,7 +181,7 @@ const ContactSection = () => {
                 </a>
 
                 <a
-                  href="https://t.me/@best_shoping"
+                  href="https://t.me/best_shoping"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-[#0088cc] hover:bg-[#006699] text-white px-4 py-2 rounded-lg transition-colors"

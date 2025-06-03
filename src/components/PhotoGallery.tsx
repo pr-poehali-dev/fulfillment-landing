@@ -9,29 +9,26 @@ const PhotoGallery = () => {
     {
       url: "https://cdn.poehali.dev/files/e0e49bae-d891-4c94-adc9-062c07e86180.jpg",
       title: "Складские операции",
-      description:
-        "Современный склад с профессиональным оборудованием для фулфилмента",
     },
     {
       url: "https://cdn.poehali.dev/files/6a8172f4-aae5-47f0-befe-4a16bb2c8ac3.jpg",
       title: "Процесс упаковки",
-      description:
-        "Качественная упаковка товаров с соблюдением всех стандартов",
     },
     {
       url: "https://cdn.poehali.dev/files/3f2107e1-bad4-449d-93e8-4dc217ad4989.jpg",
       title: "Управление инвентарем",
-      description: "Точный учёт и контроль всех товаров на складе",
     },
     {
       url: "https://cdn.poehali.dev/files/f44d4abe-ae8e-4902-b8f9-e20732d025c4.jpg",
       title: "Логистика и доставка",
-      description: "Быстрая и надёжная отправка заказов по всей России",
     },
     {
       url: "https://cdn.poehali.dev/files/11d6b9b7-ab50-4051-8acf-d05d4099cfe1.jpg",
       title: "Контроль качества",
-      description: "Тщательная проверка каждого товара перед отправкой",
+    },
+    {
+      url: "https://cdn.poehali.dev/files/a8b27ae0-d3ce-428a-949a-2a66f2e5c5f6.jpg",
+      title: "Хранение товаров",
     },
   ];
 

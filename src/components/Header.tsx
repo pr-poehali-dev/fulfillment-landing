@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex items-center">
             <div>
               <h1 className="text-xl font-bold text-gray-900 font-montserrat">
-                FulFillment Pro
+                FF - Best
               </h1>
               <p className="text-xs text-gray-600">
                 Москва, ул. Сормовский проезд 7А к2

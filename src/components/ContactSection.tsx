@@ -28,7 +28,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Телефон</div>
-                    <div className="opacity-80">+7 (495) 123-45-67</div>
+                    <div className="opacity-80">+7 (968) 890-10-02</div>
                   </div>
                 </div>
 
@@ -38,7 +38,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="opacity-80">info@fulfillment.ru</div>
+                    <div className="opacity-80">ff-best@bk.ru</div>
                   </div>
                 </div>
 
@@ -104,6 +104,34 @@ const ContactSection = () => {
                 Получить расчёт
               </Button>
             </form>
+
+            {/* Messenger Buttons */}
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-center text-sm opacity-80 mb-4">
+                Или свяжитесь с нами в мессенджерах:
+              </p>
+              <div className="flex justify-center gap-4">
+                <a
+                  href="https://wa.me/+79688901002"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  <Icon name="MessageCircle" size={18} />
+                  WhatsApp
+                </a>
+
+                <a
+                  href="https://t.me/@best_shoping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-[#0088cc] hover:bg-[#006699] text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  <Icon name="Send" size={18} />
+                  Telegram
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
